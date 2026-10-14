@@ -1,5 +1,5 @@
 name: Skyblock
-version: ${project.version}
+version: 0.1.0-SNAPSHOT
 main: online.skyblock.SkyblockPlugin
 api-version: '1.21'
 author: liamVSC
