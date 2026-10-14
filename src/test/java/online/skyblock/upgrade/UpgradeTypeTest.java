@@ -13,8 +13,9 @@ class UpgradeTypeTest {
     }
 
     @Test
-    void rejectsNegativeLevelsAndOverflow() {
+    void rejectsNegativeLevelsAndCalculatesLargeValidLevelsExactly() {
         assertThrows(IllegalArgumentException.class, () -> UpgradeType.MEMBER_SLOTS.nextLevelCost(-1));
-        assertThrows(ArithmeticException.class, () -> UpgradeType.ISLAND_SIZE.nextLevelCost(Integer.MAX_VALUE));
+        assertEquals(1_000L + 750L * Integer.MAX_VALUE,
+                UpgradeType.ISLAND_SIZE.nextLevelCost(Integer.MAX_VALUE));
     }
 }
