@@ -1,0 +1,15 @@
+name: Skyblock
+version: ${project.version}
+main: online.skyblock.SkyblockPlugin
+api-version: '1.21'
+author: liamVSC
+description: Competitive Skyblock with persistent economy, upgrades, and leaderboards.
+commands:
+  skyblock:
+    description: Skyblock plugin status and help.
+    usage: /skyblock
+    aliases: [sb]
+permissions:
+  skyblock.admin:
+    description: Access Skyblock administration commands.
+    default: op
